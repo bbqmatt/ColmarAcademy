@@ -1,0 +1,492 @@
+html {
+  font-size: 16px; /* set default font size */
+}
+
+body {
+  background-color: white;
+  font-family: 'Roboto', sans-serif;
+  color: #383838;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+  color: grey;
+}
+
+/* standard flexbox container */
+.container {
+  display: flex;
+  max-width: 1050px;
+  margin: auto;
+}
+
+/* For mobile screens */
+@media only screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+}
+
+/* ======== Header section =============== */
+header {
+  background-color: white;
+  /* border: 0.1rem solid black; */
+}
+
+header .container {
+  justify-content: space-between;
+  background-color: white;
+  align-items: center;
+  height: 64px;
+}
+
+header .company-name {
+    /* border: 0.1rem solid black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    padding-left: 24px;
+}
+
+.company-name img {
+  height: 2.75rem;
+}
+
+.colmar {
+  line-height: 0.95rem;
+  font-weight: 700;
+}
+
+.academy {
+  line-height: 0.95rem;
+  font-weight: 400;
+  color: grey;
+}
+
+header h1 {
+  text-align: left;
+}
+
+header nav {
+  text-align: right;
+  flex-grow: 1;
+  padding-right: 24px;
+}
+
+header a {
+  display: inline-block;
+  font-size: 1rem;
+  /*border: 0.1rem solid black; */
+  padding-right: 16px;
+}
+
+/* hide mobile version of menu until screen less than 480px */
+nav.mobile {
+  display: none;
+}
+
+/* for mobile screens */
+
+@media only screen and (max-width: 600px) {
+  nav.desktop, header .company-name{
+    display: none;
+  }
+
+  nav.mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+}
+
+/* ============ First Section ================== */
+
+#FirstSection {
+  /* border: 2px black solid; */
+  background-color: lightgrey;
+
+}
+
+#FirstSection .container {
+  justify-content: center;
+  /* width: 1024px; */
+  margin: 0 auto;
+
+}
+
+#FirstSection .leftSection {
+  width: 60%;
+  padding: 32px 24px;
+}
+
+#FirstSection img {
+  width: 100%;
+}
+
+#FirstSection h1 {
+  padding-bottom: 1.5rem;
+}
+
+#FirstSection h3 {
+  padding-bottom: 1.5rem;
+}
+
+#FirstSection .rightSection {
+  width: 40%;
+}
+
+#FirstSection .text {
+  padding: 7rem 24px;
+}
+
+#FirstSection .btn {
+  background-color: #383838;
+  color: white;
+  text-align: center;
+  padding: 8px 4rem;
+  margin-right: 3rem;
+}
+
+/* for mobile screens */
+@media only screen and (max-width: 800px) {
+  #FirstSection .container {
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #FirstSection .leftSection,
+  #FirstSection .rightSection {
+    width: 100%;
+    padding: 0rem;
+  }
+
+  #FirstSection .btn {
+    width: 100%;
+  }
+
+  #FirstSection .text {
+    align-items: center;
+    text-align: center;
+    padding: 32px 16px;
+  }
+}
+
+/* ========= Second Section ========== */
+
+#SecondSection {
+  background-color: white;
+}
+
+#SecondSection .container {
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+#SecondSection .leftSection {
+  width: 60%;
+  padding: 32px 24px;
+}
+
+#SecondSection img {
+  width: 100%;
+}
+
+#SecondSection h1 {
+  padding-top: 32px;
+  padding-bottom: 24px;
+}
+
+#SecondSection .leftSection p {
+  line-height: 1.1rem;
+  padding: 24px 0px;
+}
+
+#SecondSection .author {
+  font-size: 0.75rem;
+}
+
+#SecondSection .rightSection {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  border-left: 1px lightgrey solid;
+}
+
+#SecondSection .item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 16px;
+  border-top: 1px lightgrey solid;
+  border-bottom: 1px lightgrey solid;
+}
+
+#SecondSection .item img {
+  width: 35%;
+}
+
+#SecondSection .text {
+  width: 65%;
+  padding-left: 16px;
+}
+
+#SecondSection .rightSection p {
+  padding: 8px 0px;
+}
+
+#SecondSection .item.lecture {
+  background-color: lightgrey;
+}
+
+#SecondSection .item img.mobile {
+  display: none;
+}
+
+/* for mobile screens */
+@media only screen and (max-width: 600px) {
+
+  #SecondSection .leftSection {
+    display: none;
+    width: 100%;
+  }
+
+  #SecondSection .item img.desktop {
+    display: none;
+  }
+
+  #SecondSection .item img.mobile {
+    display: block;
+    width: 100%;
+    padding: 0rem;
+  }
+
+  #SecondSection .rightSection {
+    width: 100%;
+    margin: 0rem;
+  }
+
+  #SecondSection .item {
+    flex-direction: column;
+    padding: 16px;
+    border: none;
+    width:100%;
+  }
+
+  #SecondSection .text {
+    text-align: left;
+    padding: 16px 16px;
+    width: 100%;
+  }
+
+  #SecondSection .item.lecture {
+    background-color: white;
+  }
+
+} /* end of mobile screen */
+
+/* ======== Third Section ============ */
+
+#ThirdSection {
+  background-color: lightgrey;
+}
+
+#ThirdSection h1 {
+  text-align: center;
+  padding-top: 32px;
+  padding-bottom: 16px;
+}
+
+#ThirdSection .container {
+  flex-wrap: wrap;
+  padding: 0px 40px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 80%;
+}
+
+#ThirdSection .item-desktop {
+  background-color: white;
+  margin: 16px;
+  width: 28%;
+  height: 20rem;
+}
+
+#ThirdSection .item-mobile {
+  width:100%;
+  display: none;
+}
+
+#ThirdSection h4 {
+  padding-top: 16px;
+  padding-bottom: 8px;
+  color: grey;
+}
+
+#ThirdSection p {
+  line-height: 1.3rem;
+}
+
+#ThirdSection img {
+  width: 100%;
+}
+
+#ThirdSection .text {
+  padding: 16px 16px 24px 16px;
+}
+
+/* for mobile screens */
+@media only screen and (max-width: 750px) {
+
+  #ThirdSection {
+    background-color: white;
+    border-top: 1px lightgrey solid;
+  }
+
+  #ThirdSection .item-desktop {
+    display: none;
+  }
+
+  #ThirdSection .item-mobile {
+    display: block;
+    padding-bottom: 24px;
+  }
+
+  #ThirdSection .item-mobile h3 {
+    background-color: lightgrey;
+    padding: 16px;
+    margin: 8px;
+  }
+
+
+} /* end of mobile screen */
+
+/* ======== Forth Section ========= */
+
+#ForthSection {
+  padding: 32px 24px;
+  background-color: white;
+}
+
+#ForthSection h1 {
+  text-align: center;
+}
+
+#ForthSection .container {
+  padding-top: 32px;
+}
+
+#ForthSection .leftSection {
+  width: 60%;
+  padding-right: 24px;
+}
+
+#ForthSection .leftSection video {
+  width: 100%;
+}
+#ForthSection .leftSection h2 {
+  padding-top: 24px;
+}
+
+#ForthSection .leftSection p {
+  padding-top: 8px;
+}
+
+#ForthSection .rightSection {
+  width: 40%;
+}
+
+#ForthSection .item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#ForthSection .item.fisma {
+  background-color: lightgrey;
+}
+
+#ForthSection .rightSection img {
+  width: 35%;
+  padding: 16px;
+}
+
+#ForthSection .rightSection p {
+  padding: 8px 0px;
+}
+
+/* for mobile screens */
+@media only screen and (max-width: 750px) {
+
+  #ForthSection {
+    padding: 0rem;
+  }
+
+  #ForthSection .rightSection {
+    display: none;
+  }
+
+  #ForthSection .leftSection h2, .leftSection p {
+    display: none;
+  }
+
+  #ForthSection .container {
+    padding-top: 16px;
+  }
+
+  #ForthSection .leftSection {
+    width: 100%;
+    padding: 0rem;
+  }
+
+  #ForthSection video {
+    padding: 0rem;
+    padding-bottom: 24px;
+  }
+
+} /* end mobile screen */
+
+
+
+/* ========== This is the footer section ============ */
+
+footer {
+  border-top: 1px grey solid;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 24px;
+  color: lightgrey;
+  font-size: 0.75rem;
+}
+
+/* for mobile screens */
+@media only screen and (max-width: 750px) {
+    footer {
+      border: none;
+    }
+
+    footer .terms-privacy {
+      display: none;
+    }
+}
